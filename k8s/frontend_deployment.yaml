@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hrms-frontend
+  name: hrms_frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hrms-frontend
+      app: hrms_frontend
   template:
     metadata:
       labels:
-        app: hrms-frontend
+        app: hrms_frontend
     spec:
       containers:
       - name: frontend
-        image: 930664225702.dkr.ecr.us-east-1.amazonaws.com/hrms-frontend:latest
+        image: 930664225702.dkr.ecr.us-east-1.amazonaws.com/hrms_frontend:latest
         ports:
         - containerPort: 80

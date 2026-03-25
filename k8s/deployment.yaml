@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hrms-backend
+  name: hrms_backend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hrms-backend
+      app: hrms_backend
   template:
     metadata:
       labels:
-        app: hrms-backend
+        app: hrms_backend
     spec:
       containers:
-      - name: hrms-backend
-        image: 930664225702.dkr.ecr.us-east-1.amazonaws.com/hrms_ecr_repo:latest
+      - name: hrms_backend
+        image: 930664225702.dkr.ecr.us-east-1.amazonaws.com/hrms_backend:latest
         ports:
         - containerPort: 8080
 
