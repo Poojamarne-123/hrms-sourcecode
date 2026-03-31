@@ -10,11 +10,12 @@ pipeline {
     stages {
 
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Poojamarne-123/hrms-sourcecode.git'
-            }
-        }
-
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/Poojamarne-123/hrms-sourcecode.git',
+            credentialsId: 'github-creds'
+    }
+}
         stage('Docker Login to ECR') {
             steps {
                 sh """
